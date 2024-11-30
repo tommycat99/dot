@@ -98,34 +98,48 @@
   <section class="hero">
     <div data-aos="fade-up">
       <div class="dot-logo"></div>
-      <h1>$DOT - The Dot That Could</h1>
-      <p>The simplest, funniest, and most powerful memecoin. Just a dot, but it makes a difference!</p>
+      <h1>This is $DOT. There are many like it but this one is ours</h1>
+      <p>This is a $DOT. You determine the value of this DOT. Whether you hold this DOT, Jeet this DOT, Fud This DOT, or this DOT reaches an Mcap of 100M is entirely up to you. </p>
+      <p>Contract Address (✂): <code class="CA">Etm7oP1rMW2Xe5wjbpjpFok4VfNc6ifMpamiVgXgpump</code></p>
       <a href="https://t.me/ThisIsADOT" class="btn btn-dot" target="_blank"><i class="fab fa-telegram"></i> Join Us on Telegram</a>
     </div>
   </section>
 
   <!-- Features Section -->
-  <section class="features text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4" data-aos="flip-left">
-          <div class="icon"><i class="fas fa-circle"></i></div>
-          <h3>Simple</h3>
-          <p>No fluff, no nonsense. $DOT is just a dot, and that's all it needs to be.</p>
+<!-- Features Section -->
+<section class="features text-center">
+  <div class="container">
+    <div class="row">
+      <!-- Humanity Column -->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="icon">
+          <i class="fas fa-globe"></i>
         </div>
-        <div class="col-md-4" data-aos="flip-up">
-          <div class="icon"><i class="fas fa-smile-beam"></i></div>
-          <h3>Funny</h3>
-          <p>It's a dot. Who doesn't love a dot? Bring smiles to faces with $DOT.</p>
+        <h3>Humanity</h3>
+        <p>What gives $DOT value is humanity. $DOT transcends time, race & geography. The insignificant becomes the binding agent pushing towards a common goal.</p>
+      </div>
+      
+      <!-- Community Column -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon">
+          <i class="fas fa-users"></i>
         </div>
-        <div class="col-md-4" data-aos="flip-right">
-          <div class="icon"><i class="fas fa-fire"></i></div>
-          <h3>Viral</h3>
-          <p>Memes and simplicity go hand in hand. Share the dot and go viral!</p>
+        <h3>Community</h3>
+        <p>No scams, no fuds, but a real project with a real project scope focused on those who choose their own future with strong representation in Discord, Telegram, and X.</p>
+      </div>
+      
+      <!-- Viral Column -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="icon">
+          <i class="fas fa-bullhorn"></i>
         </div>
+        <h3>Viral</h3>
+        <p>$DOT is the epitome of the word Meme. Just take a look at our X account. $DOT always was, is today and always will be. Everywhere.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Links Section -->
   <section class="links-section">
@@ -171,13 +185,22 @@
     });
 
     let button = document.querySelector(".CA");
-    // get text in div
-    let textToCopy = document.querySelector(".CA").innerHTML;
+    // Get the original text in the div
+    let textToCopy = button.innerHTML;
 
     button.addEventListener("click", () => {
+        // Copy the text to the clipboard
         navigator.clipboard.writeText(textToCopy);
-        document.querySelector(".CA").innerHTML = "COPIED !";
+
+        // Temporarily change the text to "COPIED!"
+        button.innerHTML = "COPIED !";
+
+        // Restore the original text after 500ms
+        setTimeout(() => {
+            button.innerHTML = textToCopy;
+        }, 500);
     });
+
   </script>
 </body>
 </html>
